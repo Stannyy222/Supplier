@@ -9,6 +9,10 @@ namespace Supplier.DataModel
 {
     public class AppDbContext : DbContext
     {
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-LS461TD\\SQLEXPRESS; " +
@@ -28,6 +32,6 @@ namespace Supplier.DataModel
 
         }            
         
-        DbSet<supplier> SuppliersINV { get; set; }
+        public DbSet<supplier> SuppliersINV { get; set; }
     }
 }
