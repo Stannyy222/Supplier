@@ -34,10 +34,11 @@ namespace Supplier.App.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            var supplier = con.SuppliersINV.Find(id);
-            con.Set<supplier>().Remove(supplier);
+            var supp = con.SuppliersINV.Find(id);
+            con.Set<supplier>().Remove(supp);
             con.SaveChanges();
             return RedirectToAction("Index");
         }
+
     }
 }

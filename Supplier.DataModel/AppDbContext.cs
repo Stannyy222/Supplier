@@ -30,8 +30,8 @@ namespace Supplier.DataModel
             modelBuilder.Entity<supplier>().Property(p => p.ContactNo).HasColumnType("nvarchar(50)");
             modelBuilder.Entity<supplier>().Property(p => p.DateModified).HasColumnType("datetime");
 
-        }            
-        
+        }
+
         public DbSet<supplier> SuppliersINV { get; set; }
     }
 }
