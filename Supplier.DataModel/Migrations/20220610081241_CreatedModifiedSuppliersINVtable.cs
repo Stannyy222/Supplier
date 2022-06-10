@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Supplier.DataModel.Migrations
 {
-    public partial class CreatedSuppliersINVTable : Migration
+    public partial class CreatedModifiedSuppliersINVtable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +19,7 @@ namespace Supplier.DataModel.Migrations
                     Address = table.Column<string>(type: "nvarchar(200)", nullable: false),
                     Representative = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     ContactNo = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateAdded = table.Column<DateTime>(type: "datetime", nullable: false),
                     DateModified = table.Column<DateTime>(type: "datetime", nullable: false)
                 },
                 constraints: table =>

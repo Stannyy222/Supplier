@@ -43,7 +43,7 @@ namespace Supplier.DataModel.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.Property<DateTime>("DateModified")
                         .HasColumnType("datetime");

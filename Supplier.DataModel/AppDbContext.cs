@@ -12,6 +12,7 @@ namespace Supplier.DataModel
         public AppDbContext(DbContextOptions options) : base(options)
         {
 
+
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,7 +29,14 @@ namespace Supplier.DataModel
             modelBuilder.Entity<supplier>().Property(p => p.Address).HasColumnType("nvarchar(200)");
             modelBuilder.Entity<supplier>().Property(p => p.Representative).HasColumnType("nvarchar(100)");
             modelBuilder.Entity<supplier>().Property(p => p.ContactNo).HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<supplier>().Property(p => p.DateAdded).HasColumnType("datetime");
             modelBuilder.Entity<supplier>().Property(p => p.DateModified).HasColumnType("datetime");
+
+
+            modelBuilder.Entity<supplier>().Property(P => P.CompanyName).IsRequired();
+            modelBuilder.Entity<supplier>().Property(P => P.Address).IsRequired();
+            modelBuilder.Entity<supplier>().Property(P => P.Representative).IsRequired();
+            modelBuilder.Entity<supplier>().Property(P => P.ContactNo).IsRequired();
 
         }
 

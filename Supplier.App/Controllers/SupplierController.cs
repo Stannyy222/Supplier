@@ -32,12 +32,18 @@ namespace Supplier.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int SupplierID)
         {
-            var supp = con.SuppliersINV.Find(id);
-            con.Set<supplier>().Remove(supp);
-            con.SaveChanges();
-            return RedirectToAction("Index");
+                var supp = con.SuppliersINV.Find(SupplierID);
+                con.Set<supplier>().Remove(supp);
+                con.SaveChanges();
+
+                return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id == null) return RedirectToAction("Index")
         }
 
     }
