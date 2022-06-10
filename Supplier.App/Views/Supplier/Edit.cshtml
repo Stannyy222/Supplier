@@ -17,7 +17,7 @@
     <label asp-for="ContactNo"></label>
     <input type="text" asp-for="ContactNo" class="form-control" />
     
-    <input type="hidden" asp-for="DateModified"/>
+    <input type="hidden" asp-for="DateModified" value="Utc.Now"/>
 
     <a asp-controller="Supplier" asp-action="Index" class="btn btn-primary" 
         > Back </a>
