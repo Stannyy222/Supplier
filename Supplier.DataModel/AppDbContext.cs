@@ -31,13 +31,6 @@ namespace Supplier.DataModel
             modelBuilder.Entity<supplier>().Property(p => p.ContactNo).HasColumnType("nvarchar(50)");
             modelBuilder.Entity<supplier>().Property(p => p.DateAdded).HasColumnType("datetime");
             modelBuilder.Entity<supplier>().Property(p => p.DateModified).HasColumnType("datetime");
-
-
-            modelBuilder.Entity<supplier>().Property(P => P.CompanyName).IsRequired();
-            modelBuilder.Entity<supplier>().Property(P => P.Address).IsRequired();
-            modelBuilder.Entity<supplier>().Property(P => P.Representative).IsRequired();
-            modelBuilder.Entity<supplier>().Property(P => P.ContactNo).IsRequired();
-
         }
 
         public DbSet<supplier> SuppliersINV { get; set; }

@@ -12,8 +12,8 @@ using Supplier.DataModel;
 namespace Supplier.DataModel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220610081241_CreatedModifiedSuppliersINVtable")]
-    partial class CreatedModifiedSuppliersINVtable
+    [Migration("20220610151601_CreatedSupplierTbl")]
+    partial class CreatedSupplierTbl
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

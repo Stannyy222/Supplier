@@ -23,6 +23,7 @@ else
                 <th> Date Added </th>
                 <th> Date Modified </th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -35,9 +36,12 @@ else
                        <td> @item.ContactNo</td>
                         <td> @item.DateAdded</td>
                          <td> @item.DateModified</td>
+                         <td>
+                             <a asp-controller="Supplier" asp-action="Edit" 
+                             asp-route-id="@item.SupplierID" class="btn btn-info btn-sm"> Edit </a>
+                             
+                         </td>
                          <td> 
-                             <a asp-controller="Supplier" asp-action="Edit" asp-route="@item.SupplierID" 
-                                class="btn btn-info btn-sm"> Edit </a>
 
                              <form asp-controller="Supplier" asp-action="Delete" method="post">
                                  <input type="hidden" name="SupplierID" value="@item.SupplierID">

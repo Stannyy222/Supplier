@@ -43,8 +43,20 @@ namespace Supplier.App.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if (id == null) return RedirectToAction("Index")
+            if (id == null) return RedirectToAction("Index");
+
+            var supp = con.SuppliersINV.Find(id);
+
+            return View(supp);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(supplier model)
+        {
+            con.Update(model);
+            con.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

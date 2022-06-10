@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Supplier.DataModel.Migrations
 {
-    public partial class CreatedModifiedSuppliersINVtable : Migration
+    public partial class CreatedSupplierTbl : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
