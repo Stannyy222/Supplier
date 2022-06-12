@@ -13,7 +13,7 @@ namespace Supplier.DataModel
         public string Address { get; set; }
         public string Representative { get; set; }
         public string ContactNo { get; set; }
-        
+
         public DateTime DateAdded { get; set; } = DateTime.Now;
         public DateTime DateModified { get; set; } = DateTime.Now;
 

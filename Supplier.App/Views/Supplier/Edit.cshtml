@@ -21,7 +21,8 @@
     <input type="text" asp-for="ContactNo" class="form-control" />
     <br />
 
-    <input type="hidden" asp-for="DateModified" value="UtcNow"/>
+    <input type="hidden" asp-for="DateAdded" value="@Model.DateAdded" />
+    <input type="hidden" asp-for="DateModified" value="Utc.Now"/>
     <br />
 
     <input type="submit" value="Save Changes" class="btn btn-success" />
