@@ -31,8 +31,18 @@ namespace Huerto___ENTPROG___OTIS1.DataModel
             modelBuilder.Entity<supplier>().Property(p => p.ContactNo).HasColumnType("nvarchar(50)");
             modelBuilder.Entity<supplier>().Property(p => p.DateAdded).HasColumnType("datetime");
             modelBuilder.Entity<supplier>().Property(p => p.DateModified).HasColumnType("datetime");
+
+            //ProductsINV
+            modelBuilder.Entity<product>().Property(p => p.Name).HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<product>().Property(p => p.Description).HasColumnType("nvarchar(100)");
+            modelBuilder.Entity<product>().Property(p => p.Qty).HasDefaultValue("0");
+            modelBuilder.Entity<product>().Property(p => p.Unit).HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<product>().Property(p => p.DateAdded).HasColumnType("datetime");
+            modelBuilder.Entity<product>().Property(p => p.DateModified).HasColumnType("datetime");
+
         }
 
         public DbSet<supplier> SuppliersINV { get; set; }
+        public DbSet<product> ProductsINV { get; set; }    
     }
 }

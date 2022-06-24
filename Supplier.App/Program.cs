@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Huerto___ENTPROG___OTIS1.DataModel;
+using Supplier.App.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
