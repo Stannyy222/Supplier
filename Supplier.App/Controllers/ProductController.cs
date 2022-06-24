@@ -19,5 +19,36 @@ namespace Supplier.App.Controllers
         {
             return View(mapper.Map<List<productVM>>(await repo.GetAllAsync()));
         }
+
+        public IActionResult Add()
+        {
+            return View(new productVM());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Add(productVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                await repo.AddAsync(mapper.Map<product>(model));
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int ProductID)
+        {
+            await repo.DeleteAsync(ProductID);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

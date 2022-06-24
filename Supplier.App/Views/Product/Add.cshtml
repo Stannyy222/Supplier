@@ -1,0 +1,32 @@
+﻿@model productVM
+
+<h3> Create New Product </h3>
+<a asp-controller="Product" asp-action="Index" class="btn btn-primary" 
+        > Back </a>
+
+<form asp-controller="Product" asp-action="Add" method="post"> 
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label asp-for="Description"></label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <label asp-for="Qty">Quantity</label>
+    <input type="number" asp-for="Qty" class="form-control" />
+    <br />
+    <label asp-for="Unit"></label>
+    <input type="text" asp-for="Unit" class="form-control" />
+    <br />
+
+    <input type="hidden" asp-for="DateAdded" value="DateTime.Now" />
+    <input type="hidden" asp-for="DateModified" value="" />
+
+    <input type="submit" value="Add Product" class="btn btn-success" />
+
+</form>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
