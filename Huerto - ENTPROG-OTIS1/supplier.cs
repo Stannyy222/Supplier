@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Supplier.DataModel
+namespace Huerto___ENTPROG___OTIS1.DataModel
 {
     public class supplier
     {

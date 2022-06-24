@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>Huerto - ENTPROG-OTIS1</AssemblyName>
+    <RootNamespace>Huerto - ENTPROG-OTIS1</RootNamespace>
+    <PackageId>Huerto - ENTPROG-OTIS1</PackageId>
+    <Product>Huerto - ENTPROG-OTIS1</Product>
+    <AssemblyVersion></AssemblyVersion>
+    <BaseOutputPath>bin\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-namespace Supplier.App.Models
+namespace Huerto___ENTPROG___OTIS1.App.Models
 {
     public class ErrorViewModel
     {

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Supplier.DataModel;
+using Huerto___ENTPROG___OTIS1.DataModel;
 
 #nullable disable
 
-namespace Supplier.DataModel.Migrations
+namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot

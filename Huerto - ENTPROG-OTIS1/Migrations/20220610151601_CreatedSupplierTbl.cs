@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Supplier.DataModel.Migrations
+namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
 {
     public partial class CreatedSupplierTbl : Migration
     {

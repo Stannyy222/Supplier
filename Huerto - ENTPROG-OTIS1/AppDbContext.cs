@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Supplier.DataModel
+namespace Huerto___ENTPROG___OTIS1.DataModel
 {
     public class AppDbContext : DbContext
     {
@@ -16,9 +16,9 @@ namespace Supplier.DataModel
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-SSAA20D\\SQLEXPRESS; " +
-                "Database=eisensy_csbentprog; UID=eisensy_student; " +
-                "PWD=Benilde@2020; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-LS461TD\\SQLEXPRESS; " +
+                "Database=Entprog_Supplier; Integrated Security=SSPI; " +
+                "TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

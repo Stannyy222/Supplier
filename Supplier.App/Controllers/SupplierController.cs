@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Supplier.DataModel;
+using Huerto___ENTPROG___OTIS1.DataModel;
 
-namespace Supplier.App.Controllers
+namespace Huerto___ENTPROG___OTIS1.App.Controllers
 {
     public class SupplierController : Controller
     {

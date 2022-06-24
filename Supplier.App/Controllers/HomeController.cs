@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Supplier.App.Models;
+using Huerto___ENTPROG___OTIS1.App.Models;
 using System.Diagnostics;
 
-namespace Supplier.App.Controllers
+namespace Huerto___ENTPROG___OTIS1.App.Controllers
 {
     public class HomeController : Controller
     {

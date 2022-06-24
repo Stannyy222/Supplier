@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Supplier.DataModel;
+using Huerto___ENTPROG___OTIS1.DataModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
