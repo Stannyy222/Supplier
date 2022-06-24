@@ -42,16 +42,16 @@ namespace Huerto___ENTPROG___OTIS1.Repository
             return await context.Set<T>().ToListAsync();
         }
 
-        public Task<List<T>> GetAsync(int id)
+        public async Task<T> GetAsync(int id)
         {
-            
+            T entity = await context.Set<T>().FindAsync(id);
+            return entity;
         }
 
-        public async Task<T> UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync();
-            return entity;
         }
     }
 }

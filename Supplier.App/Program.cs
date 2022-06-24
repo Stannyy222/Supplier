@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Huerto___ENTPROG___OTIS1.DataModel;
 using Supplier.App.Configuration;
+using Supplier.App.Models.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
+
+builder.Services.AddScoped<IProductRepo, productRepo>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
