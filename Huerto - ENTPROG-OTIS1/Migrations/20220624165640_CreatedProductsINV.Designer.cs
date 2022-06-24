@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220624011822_CreatedProductsINVTable")]
-    partial class CreatedProductsINVTable
+    [Migration("20220624165640_CreatedProductsINV")]
+    partial class CreatedProductsINV
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,27 +67,22 @@ namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"), 1L, 1);
 
-                    b.Property<DateTime>("DateAdded")
+                    b.Property<DateTime?>("DateAdded")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("DateModified")
+                    b.Property<DateTime?>("DateModified")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Qty")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
+                    b.Property<int?>("Qty")
+                        .HasColumnType("int");
 
                     b.Property<string>("Unit")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("ProductID");

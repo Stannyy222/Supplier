@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
 {
-    public partial class CreatedProductsINVTable : Migration
+    public partial class CreatedProductsINV : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,12 +15,12 @@ namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
                 {
                     ProductID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    Qty = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
-                    Unit = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    DateAdded = table.Column<DateTime>(type: "datetime", nullable: false),
-                    DateModified = table.Column<DateTime>(type: "datetime", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(100)", nullable: true),
+                    Qty = table.Column<int>(type: "int", nullable: true),
+                    Unit = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    DateAdded = table.Column<DateTime>(type: "datetime", nullable: true),
+                    DateModified = table.Column<DateTime>(type: "datetime", nullable: true)
                 },
                 constraints: table =>
                 {

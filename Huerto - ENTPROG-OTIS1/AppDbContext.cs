@@ -16,9 +16,8 @@ namespace Huerto___ENTPROG___OTIS1.DataModel
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-SSAA20D\\SQLEXPRESS; " +
-                "Database=eisensy_csbentprog; UID=eisensy_student; " +
-                "PWD=Benilde@2020; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("SERVER=DESKTOP-SSAA20D\\SQLEXPRESS;DATABASE=eisensy_csbentprog; " +
+                "UID=eisensy_student;PWD=Benilde@2020;TRUSTSERVERCERTIFICATE=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -35,14 +34,14 @@ namespace Huerto___ENTPROG___OTIS1.DataModel
             //ProductsINV
             modelBuilder.Entity<product>().Property(p => p.Name).HasColumnType("nvarchar(50)");
             modelBuilder.Entity<product>().Property(p => p.Description).HasColumnType("nvarchar(100)");
-            modelBuilder.Entity<product>().Property(p => p.Qty).HasDefaultValue("0");
             modelBuilder.Entity<product>().Property(p => p.Unit).HasColumnType("nvarchar(50)");
             modelBuilder.Entity<product>().Property(p => p.DateAdded).HasColumnType("datetime");
             modelBuilder.Entity<product>().Property(p => p.DateModified).HasColumnType("datetime");
 
+
         }
 
         public DbSet<supplier> SuppliersINV { get; set; }
-        public DbSet<product> ProductsINV { get; set; }    
+        public DbSet<product>? ProductsINV { get; set; }
     }
 }
