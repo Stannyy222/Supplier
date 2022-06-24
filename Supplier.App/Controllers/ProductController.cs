@@ -29,7 +29,7 @@ namespace Supplier.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add(productVM model)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 await repo.AddAsync(mapper.Map<product>(model));
 
@@ -49,6 +49,28 @@ namespace Supplier.App.Controllers
 
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Edit (int? id)
+        {
+            if (id == null) return RedirectToAction("Index");
+            productVM prod = mapper.Map<productVM>(await repo.GetAsync((int)id));
+            
+            return View(prod);
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(productVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                await repo.UpdateAsync(mapper.Map<product>(model));
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+        }
     }
 }

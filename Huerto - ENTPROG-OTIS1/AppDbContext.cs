@@ -16,9 +16,9 @@ namespace Huerto___ENTPROG___OTIS1.DataModel
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-LS461TD\\SQLEXPRESS; " +
-                "Database=Entprog_Supplier; Integrated Security=SSPI; " +
-                "TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-SSAA20D\\SQLEXPRESS; " +
+                "Database=eisensy_csbentprog; UID=eisensy_student; " +
+                "PWD=Benilde@2020; TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
