@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220624165640_CreatedProductsINV")]
-    partial class CreatedProductsINV
+    [Migration("20220707124948_CreatedProductsINVTbl")]
+    partial class CreatedProductsINVTbl
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -79,8 +79,10 @@ namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("Qty")
-                        .HasColumnType("int");
+                    b.Property<int>("Qty")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Unit")
                         .HasColumnType("nvarchar(50)");

@@ -77,8 +77,10 @@ namespace Huerto___ENTPROG___OTIS1.DataModel.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("Qty")
-                        .HasColumnType("int");
+                    b.Property<int>("Qty")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<string>("Unit")
                         .HasColumnType("nvarchar(50)");

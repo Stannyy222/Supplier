@@ -17,6 +17,7 @@ namespace Supplier.App.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            
             return View(mapper.Map<List<productVM>>(await repo.GetAllAsync()));
         }
 
