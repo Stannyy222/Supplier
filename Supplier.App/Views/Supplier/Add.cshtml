@@ -2,7 +2,7 @@
 
 <h3> Create New Supplier </h3>
 <a asp-controller="Supplier" asp-action="Index" class="btn btn-primary" 
-        > Back </a>
+        >  <i class="fas fa-arrow-left"></i> </a>
 
 <form asp-controller="Supplier" asp-action="Add" method="post"> 
     <label asp-for="CompanyName"></label>
@@ -21,7 +21,10 @@
     <input type="hidden" asp-for="DateAdded" value="DateTime.Now" />
     <input type="hidden" asp-for="DateModified" value="" />
 
-    <input type="submit" value="Add Supplier" class="btn btn-success" />
+    <div class="btn btn-success" >
+        <i class="fas fa-add"></i>
+    <input type="submit" value="Add Supplier" class="text-decoration-none bg-transparent border-0 text-white" />
+    </div>
 
 </form>
 

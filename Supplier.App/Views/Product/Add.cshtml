@@ -2,7 +2,7 @@
 
 <h3> Create New Product </h3>
 <a asp-controller="Product" asp-action="Index" class="btn btn-primary" 
-        > Back </a>
+        >  <i class="fas fa-arrow-left"></i> </a>
 
 <form asp-controller="Product" asp-action="Add" method="post"> 
 
@@ -28,7 +28,10 @@
     <input type="hidden" asp-for="DateAdded"  />
     <input type="hidden" asp-for="DateModified"  />
 
-    <input type="submit" value="Add Product" class="btn btn-success" />
+    <div class="btn btn-success" >
+        <i class="fas fa-add"></i>
+    <input type="submit" value="Add Product" class="text-decoration-none bg-transparent border-0 text-white" />
+    </div>
 
 </form>
 

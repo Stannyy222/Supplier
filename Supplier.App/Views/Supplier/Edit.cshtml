@@ -1,6 +1,9 @@
 ﻿@model supplier
 
 <h3>Edit Supplier</h3>
+<a asp-controller="Supplier" asp-action="Index" class="btn btn-primary" 
+        > <i class="fas fa-arrow-left"></i> </a>
+
 
 <form asp-controller="Supplier" asp-action="Edit" method="post">
     <input type="hidden" asp-for="SupplierID" />
@@ -25,7 +28,13 @@
     <input type="hidden" asp-for="DateModified" value="Utc.Now"/>
     <br />
 
-    <input type="submit" value="Save Changes" class="btn btn-success" />
+    <div class="btn btn-success" >
+        <i class="fas fa-save"></i>
+    <input type="submit" value="Save Changes" class="text-decoration-none bg-transparent border-0 text-white" />
+    </div>
+
+    <a asp-controller="Supplier" asp-action="Index" class="btn btn-danger" 
+        > Cancel </a>
 
 </form>
 
