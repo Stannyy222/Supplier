@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Huerto___ENTPROG___OTIS1.DataModel;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Huerto___ENTPROG___OTIS1.App.Controllers
 {
+    [Authorize]
     public class SupplierController : Controller
     {
         private readonly AppDbContext con;

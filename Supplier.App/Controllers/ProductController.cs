@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using Huerto___ENTPROG___OTIS1;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Supplier.App.Models;
 using Supplier.App.Models.Repository;
 
 namespace Supplier.App.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly IProductRepo repo;
